@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{7531A133-2C03-A844-7657-7C989D449686}") = "QuadTreeLOD", "Assembly-CSharp.csproj", "{BA105064-821C-4387-07C2-32ED6FC4157F}"
+EndProject
+Project("{7531A133-2C03-A844-7657-7C989D449686}") = "QuadTreeLOD", "Assembly-CSharp-Editor.csproj", "{5CF027E2-A01F-4669-9B91-CA891CF285DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA105064-821C-4387-07C2-32ED6FC4157F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA105064-821C-4387-07C2-32ED6FC4157F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA105064-821C-4387-07C2-32ED6FC4157F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA105064-821C-4387-07C2-32ED6FC4157F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF027E2-A01F-4669-9B91-CA891CF285DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF027E2-A01F-4669-9B91-CA891CF285DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF027E2-A01F-4669-9B91-CA891CF285DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF027E2-A01F-4669-9B91-CA891CF285DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

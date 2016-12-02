@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.dll",
+				"*.meta"
+			],
+			"path": "Assets/Scripts",
+			"name": "QuadTreeLOD"
+		}
+	],
+	"solution_file": "./QuadTreeLOD.sln"
+}
