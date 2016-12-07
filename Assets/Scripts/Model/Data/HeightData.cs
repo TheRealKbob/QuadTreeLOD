@@ -2,15 +2,17 @@ using UnityEngine;
 
 namespace QuadTreeLOD
 {
+	[ CreateAssetMenu() ]
     public class HeightData : ScriptableObject
     {
-    	public float radius;
 		public float multiplier;
 		public AnimationCurve curve;
 
-		public AnimationCurve GetCurve()
+		public AnimationCurve Curve
 		{
-			return new AnimationCurve( curve.keys );
+			get{
+				return new AnimationCurve( curve.keys );
+			}
 		}
     }
 }

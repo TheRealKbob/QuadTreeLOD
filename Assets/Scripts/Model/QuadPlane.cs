@@ -21,8 +21,13 @@ namespace QuadTreeLOD
 
 		public NoiseData noiseData;
 		public HeightData heightData;
+		public TextureData textureData;
 
-		public MapData mapData;
+		[ Range( 8, 32 ) ]
+		public int gridSize = 16;
+		public float radius = 6;
+
+		public MapData mapData{ get; private set; }
 
 		private QuadTree quadTree;
 
@@ -39,6 +44,11 @@ namespace QuadTreeLOD
 			foreach( Transform child in transform ) {
 			    DestroyImmediate(child.gameObject);
 			}
+		}
+
+		void OnValidate()
+		{
+			gridSize = MathUtilities.RoundToFactor( gridSize, 8 );
 		}
     }
 }

@@ -33,7 +33,7 @@ namespace QuadTreeLOD
 				terrainObject.transform.parent = owner.transform;
 			}
 
-			meshData = MeshGenerator.GenerateQuadPlane( 16, owner.mapData, owner.heightData );
+			meshData = MeshGenerator.GenerateQuadPlane( owner.gridSize, owner.radius, owner.mapData, owner.heightData );
 
 			terrainObject.GetComponent<MeshFilter>().mesh = meshData.CreateMesh();
 			terrainObject.SetActive( true );

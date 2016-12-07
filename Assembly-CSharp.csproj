@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Controller\MeshGenerator.cs" />
      <Compile Include="Assets\Scripts\Model\Data\HeightData.cs" />
      <Compile Include="Assets\Scripts\Model\Data\NoiseData.cs" />
+     <Compile Include="Assets\Scripts\Model\Data\TextureData.cs" />
      <Compile Include="Assets\Scripts\Model\Noise.cs" />
      <Compile Include="Assets\Scripts\Model\QuadPlane.cs" />
      <Compile Include="Assets\Scripts\Model\QuadTree.cs" />

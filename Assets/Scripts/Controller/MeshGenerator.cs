@@ -6,7 +6,7 @@ namespace QuadTreeLOD
 {
     public static class MeshGenerator
     {
-		public static MeshData GenerateQuadPlane( int vertexPerLine, MapData _mapData, HeightData _heightData )
+		public static MeshData GenerateQuadPlane( int vertexPerLine, float _radius, MapData _mapData, HeightData _heightData )
 		{
 			int size = vertexPerLine + 1;
 			Vector2 topLeft = new Vector2( vertexPerLine / -2f, vertexPerLine / -2f );
@@ -14,15 +14,20 @@ namespace QuadTreeLOD
 			MeshData meshData = new MeshData( size );
 			int vertexIndex = 0;
 
+			float radiusScale = _radius / vertexPerLine;
+
 			for( int x = 0; x < size; x++ )
 			{
 				for( int y = 0; y < size; y++ )
 				{
-					float q = topLeft.x + x;
-					float r = 0;
-					float s = topLeft.y + y;
+					float heightValue = _heightData.Curve.Evaluate( _mapData.heightMap[ ( x * (vertexPerLine - 1) ), ( y * (vertexPerLine - 1) ) ] ) * _heightData.multiplier * radiusScale;
+					float q = (topLeft.x + x) * radiusScale;
+					float r = (vertexPerLine / 2) * radiusScale;
+					float s = (topLeft.y + y) * radiusScale;
+					Vector3 vert = new Vector3( q, r, s ).normalized;
+					vert *=  _radius + heightValue;
 					Vector2 uv = new Vector2 ( x / (float)size, y / (float)size );
-					meshData.AddVertex( new Vector3( q, r, s ), uv, vertexIndex );
+					meshData.AddVertex( vert, uv, vertexIndex );
 					if( x < vertexPerLine && y < vertexPerLine )
 					{
 						meshData.AddTriangle( vertexIndex, vertexIndex + size + 1, vertexIndex + size );
